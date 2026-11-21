@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#263b32">
+  <meta name="description" content="Preguntas para compartir, descubrir y vivir la fe. Un mazo digital para conversar sin prisa.">
+  <title>En Clave de Fe — La fe se conversa</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/cards.js" defer></script>
+  <script src="js/app.js" defer></script>
+</head>
+<body>
+  <div class="site-shell">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="En Clave de Fe, inicio">
+        <span class="brand-mark">e<span>·</span>f</span>
+        <span class="brand-name">EN CLAVE <i>DE FE</i></span>
+      </a>
+      <nav class="top-actions" aria-label="Acciones">
+        <button class="icon-button" id="dailyBtn" title="Carta del día" aria-label="Carta del día">☼</button>
+        <button class="icon-button" id="favoritesBtn" title="Ver favoritas" aria-label="Ver favoritas">♡<span class="fav-count" id="favCount">0</span></button>
+        <button class="icon-button" id="groupBtn" title="Modo grupo" aria-label="Modo grupo">⛶</button>
+      </nav>
+    </header>
+
+    <main>
+      <section class="intro">
+        <p class="eyebrow"><span></span> UN ESPACIO PARA ENCONTRARNOS</p>
+        <h1>La fe también<br><em>se conversa.</em></h1>
+        <p class="intro-copy">Preguntas que abren caminos, historias que nos acercan y pequeños pasos para vivir lo que creemos.</p>
+      </section>
+
+      <section class="deck-section" aria-label="Mazo de cartas">
+        <div class="deck-heading">
+          <div>
+            <p class="section-kicker">ELIGE POR DÓNDE EMPEZAR</p>
+            <h2>Una pregunta puede<br class="mobile-break"> cambiar la conversación.</h2>
+          </div>
+          <span class="deck-total" id="deckTotal">100 cartas</span>
+        </div>
+
+        <div class="category-list" id="categories" aria-label="Filtrar por categoría">
+          <button class="category-chip active" data-category="all">Todas</button>
+        </div>
+
+        <div class="card-stage" id="cardStage">
+          <div class="card-paper" id="questionCard">
+            <div class="card-topline">
+              <span class="card-brand">EN CLAVE DE FE</span>
+              <span class="card-number" id="cardNumber">01 / 100</span>
+            </div>
+            <div class="card-content">
+              <span class="card-category" id="cardCategory">PARA EMPEZAR</span>
+              <p class="card-question" id="cardQuestion">¿Qué momento de esta semana te gustaría guardar en la memoria?</p>
+            </div>
+            <div class="card-bottom">
+              <span id="cardType">PREGUNTA PARA COMPARTIR</span>
+              <span class="card-cross">✳</span>
+            </div>
+          </div>
+          <div class="stage-shadow"></div>
+        </div>
+
+        <div class="card-controls">
+          <button class="primary-button" id="nextBtn"><span class="shuffle-icon">↝</span> Sacar otra carta</button>
+          <div class="secondary-actions">
+            <button class="text-button" id="favoriteBtn">♡ <span>Guardar</span></button>
+            <button class="text-button" id="shareBtn">↗ <span>Compartir</span></button>
+            <button class="text-button" id="printBtn">▤ <span>Imprimir</span></button>
+          </div>
+        </div>
+
+        <div class="reflection-panel" id="reflectionPanel">
+          <button class="reflection-toggle" id="deepenBtn" aria-expanded="false">
+            <span class="sparkle">✳</span>
+            <span><b>¿Seguimos profundizando?</b><small>Una segunda pregunta para ir un poco más allá</small></span>
+            <span class="chevron">＋</span>
+          </button>
+          <div class="reflection-content" id="reflectionContent" hidden>
+            <p id="reflectionText"></p>
+            <div class="scripture" id="scriptureBlock" hidden><span>PARA ILUMINAR LA CONVERSACIÓN</span><b id="scriptureText"></b></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="special-section">
+        <div class="special-heading">
+          <p class="section-kicker">NO TODO SON PREGUNTAS</p>
+          <h2>También hay otras formas<br>de encontrarnos.</h2>
+        </div>
+        <div class="special-grid">
+          <button class="special-card" data-type="silencio"><span class="special-symbol">◌</span><b>Un minuto de silencio</b><small>Parar, respirar y hacer espacio a Dios.</small></button>
+          <button class="special-card" data-type="gratitud"><span class="special-symbol">✳</span><b>Una razón para dar gracias</b><small>Reconocer lo bueno que también sucede.</small></button>
+          <button class="special-card" data-type="accion"><span class="special-symbol">→</span><b>Un pequeño paso</b><small>Llevar la conversación a la vida.</small></button>
+        </div>
+      </section>
+
+      <section class="how-section">
+        <span class="how-mark">“</span>
+        <p>No se trata de tener todas las respuestas.<br><em>Se trata de atrevernos a compartir las preguntas.</em></p>
+        <span class="how-caption">ESCUCHAR · COMPARTIR · CAMINAR</span>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <a class="footer-brand" href="#">EN CLAVE DE FE</a>
+      <p>Un espacio para preguntar, escuchar y caminar juntos.</p>
+      <span>Hecho para compartir la fe, sin prisa.</span>
+    </footer>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <div class="group-overlay" id="groupOverlay" hidden>
+    <button class="close-group" id="closeGroup" aria-label="Salir del modo grupo">×</button>
+    <div class="group-inner">
+      <span class="group-label" id="groupCategory">EN CLAVE DE FE</span>
+      <p id="groupQuestion"></p>
+      <span class="group-hint">Tómate tu tiempo. Escuchar también es una forma de compartir.</span>
+      <button class="group-next" id="groupNext">Siguiente carta ↗</button>
+    </div>
+  </div>
+  <div class="modal-backdrop" id="favoritesModal" hidden>
+    <section class="favorites-modal" role="dialog" aria-modal="true" aria-labelledby="favoritesTitle">
+      <button class="modal-close" id="closeFavorites" aria-label="Cerrar">×</button>
+      <p class="section-kicker">TU PEQUEÑA COLECCIÓN</p>
+      <h2 id="favoritesTitle">Cartas favoritas</h2>
+      <div id="favoritesList" class="favorites-list"></div>
+    </section>
+  </div>
+</body>
+</html>
