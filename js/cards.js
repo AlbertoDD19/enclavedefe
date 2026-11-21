@@ -85,7 +85,7 @@ window.FE_CARDS = [
 ["¿Qué podríamos hacer como grupo para mejorar nuestro entorno?","¿Qué primer paso podríamos realizar juntos?","Mateo 25, 35-40"]
 ]},
 {category:"Oración y gratitud",slug:"oracion",items:[
-["¿Qué te gustaría agradecer antes de terminar el día?","¿A quién podrías expresar ese agradecimiento directamente?","Salmo  благодар"],
+["¿Qué te gustaría agradecer antes de terminar el día?","¿A quién podrías expresar ese agradecimiento directamente?","Salmo 103, 1-5"],
 ["¿Qué lugar, momento o gesto te ayuda a hacer silencio?","¿Cómo podrías reservar un minuto para parar esta semana?","Salmo 46, 11"],
 ["¿Por quién te gustaría rezar hoy?","¿Hay alguna manera concreta de acompañar también a esa persona?","1 Timoteo 2, 1"],
 ["¿Qué diferencia notas entre hablar mucho y escuchar en la oración?","¿Qué podrías probar en tu próximo momento de oración?","1 Reyes 19, 11-13"],
