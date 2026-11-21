@@ -5,20 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#263b32">
   <meta name="description" content="Preguntas para compartir, descubrir y vivir la fe. Un mazo digital para conversar sin prisa.">
-  <title>En Clave de Fe — La fe se conversa</title>
+  <title>En Clave de Fe | La fe se conversa</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
   <script src="js/cards.js" defer></script>
+  <script src="js/thematic-cards.js" defer></script>
   <script src="js/app.js" defer></script>
 </head>
 <body>
   <div class="site-shell">
     <header class="topbar">
       <a class="brand" href="#" aria-label="En Clave de Fe, inicio">
-        <span class="brand-mark">e<span>·</span>f</span>
-        <span class="brand-name">EN CLAVE <i>DE FE</i></span>
+        <span class="brand-mark" aria-hidden="true"><span class="mark-e">e</span><span class="mark-divider">·</span><span class="mark-f">f</span></span>
+        <span class="brand-name"><strong>EN CLAVE</strong><i>DE FE</i></span>
       </a>
       <nav class="top-actions" aria-label="Acciones">
         <button class="icon-button" id="dailyBtn" title="Carta del día" aria-label="Carta del día">☼</button>
@@ -65,6 +66,18 @@
           <div class="stage-shadow"></div>
         </div>
 
+        <div class="reflection-panel" id="reflectionPanel">
+          <button class="reflection-toggle" id="deepenBtn" aria-expanded="false">
+            <span class="sparkle">✳</span>
+            <span><b>Profundiza en la Palabra</b><small>Una pregunta más y una cita bíblica para iluminarla</small></span>
+            <span class="chevron">＋</span>
+          </button>
+          <div class="reflection-content" id="reflectionContent" hidden>
+            <p id="reflectionText"></p>
+            <div class="scripture" id="scriptureBlock" hidden><span>LEE Y COMPARTE · PALABRA DE DIOS</span><b id="scriptureText"></b><small class="scripture-note">Busca el pasaje en tu Biblia y leedlo juntos. La referencia es una invitación a escuchar el texto en su contexto.</small></div>
+          </div>
+        </div>
+
         <div class="card-controls">
           <button class="primary-button" id="nextBtn"><span class="shuffle-icon">↝</span> Sacar otra carta</button>
           <div class="secondary-actions">
@@ -74,17 +87,6 @@
           </div>
         </div>
 
-        <div class="reflection-panel" id="reflectionPanel">
-          <button class="reflection-toggle" id="deepenBtn" aria-expanded="false">
-            <span class="sparkle">✳</span>
-            <span><b>¿Seguimos profundizando?</b><small>Una segunda pregunta para ir un poco más allá</small></span>
-            <span class="chevron">＋</span>
-          </button>
-          <div class="reflection-content" id="reflectionContent" hidden>
-            <p id="reflectionText"></p>
-            <div class="scripture" id="scriptureBlock" hidden><span>PARA ILUMINAR LA CONVERSACIÓN</span><b id="scriptureText"></b></div>
-          </div>
-        </div>
       </section>
 
       <section class="special-section">
