@@ -1,5 +1,5 @@
 (() => {
-  const cards = window.FE_CARDS || [];
+  const cards = [...(window.FE_CARDS || []), ...(window.FE_EXTRA_CARDS || [])];
   const $ = (id) => document.getElementById(id);
   const state = { category: "all", current: null, used: new Set(), favorites: new Set(JSON.parse(localStorage.getItem("ecf-favorites") || "[]")), reflectionOpen: false };
   const specials = {
